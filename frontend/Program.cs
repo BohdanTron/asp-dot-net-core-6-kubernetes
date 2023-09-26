@@ -5,19 +5,22 @@ using GloboTicket.Frontend.Services.ShoppingBasket;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddSingleton<IShoppingBasketService, InMemoryShoppingBasketService>();
 builder.Services.AddHttpClient<IConcertCatalogService, ConcertCatalogService>(
-    (provider, client) =>{
-        client.BaseAddress = new Uri(provider.GetService<IConfiguration>()?["ApiConfigs:ConcertCatalog:Uri"] ?? throw new InvalidOperationException("Missing config"));
+    (provider, client) =>
+    {
+        var uri = provider.GetService<IConfiguration>()?["ApiConfigs:ConcertCatalog:Uri"];
+        client.BaseAddress = new Uri(uri ?? throw new InvalidOperationException("Missing config"));
     });
 
 builder.Services.AddHttpClient<IOrderSubmissionService, HttpOrderSubmissionService>(
-    (provider, client) => {
-        client.BaseAddress = new Uri(provider.GetService<IConfiguration>()?["ApiConfigs:Ordering:Uri"] ?? throw new InvalidOperationException("Missing config"));
+    (provider, client) =>
+    {
+        var uri = provider.GetService<IConfiguration>()?["ApiConfigs:Ordering:Uri"];
+        client.BaseAddress = new Uri(uri ?? throw new InvalidOperationException("Missing config"));
     });
 
 builder.Services.AddSingleton<Settings>();
