@@ -17,6 +17,23 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ordering", "ordering\orderi
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{B161A798-6AAB-4AA0-B6AB-F59382E7A413}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "demos", "demos", "{D7D67322-7B4E-4058-A234-CF4E19C1C1EC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "local-k8s", "local-k8s", "{28C020A7-1F12-48AE-9993-D5AF17D23F6A}"
+	ProjectSection(SolutionItems) = preProject
+		demos\local-k8s\cluster-role-binding.yml = demos\local-k8s\cluster-role-binding.yml
+		demos\local-k8s\dashboard.txt = demos\local-k8s\dashboard.txt
+		demos\local-k8s\service-account.yaml = demos\local-k8s\service-account.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Globoticket", "Globoticket", "{6E3D0088-304E-46E2-815B-926899F5CEBA}"
+	ProjectSection(SolutionItems) = preProject
+		demos\local-k8s\catalog.yaml = demos\local-k8s\catalog.yaml
+		demos\local-k8s\frontend.yaml = demos\local-k8s\frontend.yaml
+		demos\local-k8s\ordering.yaml = demos\local-k8s\ordering.yaml
+		demos\local-k8s\sqlserver.yaml = demos\local-k8s\sqlserver.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +59,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{28C020A7-1F12-48AE-9993-D5AF17D23F6A} = {26E30656-0182-4EEF-B89E-281F23389C42}
+		{6E3D0088-304E-46E2-815B-926899F5CEBA} = {28C020A7-1F12-48AE-9993-D5AF17D23F6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9F232D3-5386-4E57-B49F-7AF54A4A8843}
