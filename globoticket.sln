@@ -28,10 +28,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "local-k8s", "local-k8s", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Globoticket", "Globoticket", "{6E3D0088-304E-46E2-815B-926899F5CEBA}"
 	ProjectSection(SolutionItems) = preProject
-		demos\local-k8s\catalog.yaml = demos\local-k8s\catalog.yaml
-		demos\local-k8s\frontend.yaml = demos\local-k8s\frontend.yaml
-		demos\local-k8s\ordering.yaml = demos\local-k8s\ordering.yaml
-		demos\local-k8s\sqlserver.yaml = demos\local-k8s\sqlserver.yaml
+		demos\local-k8s\Globoticket\catalog.yaml = demos\local-k8s\Globoticket\catalog.yaml
+		demos\local-k8s\Globoticket\frontend.yaml = demos\local-k8s\Globoticket\frontend.yaml
+		demos\local-k8s\Globoticket\ordering.yaml = demos\local-k8s\Globoticket\ordering.yaml
+		demos\local-k8s\Globoticket\sqlserver.yaml = demos\local-k8s\Globoticket\sqlserver.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "remote-k8s", "remote-k8s", "{3FE6272C-2B19-4B36-9439-C112D2DF630F}"
+	ProjectSection(SolutionItems) = preProject
+		demos\remote-k8s\create-acr.txt = demos\remote-k8s\create-acr.txt
+		demos\remote-k8s\create-cluster.txt = demos\remote-k8s\create-cluster.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Globoticket", "Globoticket", "{9059D156-CC54-4A46-8123-DAF5D3A94E44}"
+	ProjectSection(SolutionItems) = preProject
+		demos\remote-k8s\Globoticket\catalog.yaml = demos\remote-k8s\Globoticket\catalog.yaml
+		demos\remote-k8s\Globoticket\frontend.yaml = demos\remote-k8s\Globoticket\frontend.yaml
+		demos\remote-k8s\Globoticket\ordering.yaml = demos\remote-k8s\Globoticket\ordering.yaml
+		demos\remote-k8s\Globoticket\sqlserver.yaml = demos\remote-k8s\Globoticket\sqlserver.yaml
 	EndProjectSection
 EndProject
 Global
@@ -63,6 +77,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{28C020A7-1F12-48AE-9993-D5AF17D23F6A} = {26E30656-0182-4EEF-B89E-281F23389C42}
 		{6E3D0088-304E-46E2-815B-926899F5CEBA} = {28C020A7-1F12-48AE-9993-D5AF17D23F6A}
+		{3FE6272C-2B19-4B36-9439-C112D2DF630F} = {26E30656-0182-4EEF-B89E-281F23389C42}
+		{9059D156-CC54-4A46-8123-DAF5D3A94E44} = {3FE6272C-2B19-4B36-9439-C112D2DF630F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9F232D3-5386-4E57-B49F-7AF54A4A8843}
