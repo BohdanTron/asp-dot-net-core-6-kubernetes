@@ -48,6 +48,28 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Globoticket", "Globoticket"
 		demos\remote-k8s\Globoticket\sqlserver.yaml = demos\remote-k8s\Globoticket\sqlserver.yaml
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "improve-security", "improve-security", "{A006FB5B-4158-4018-9E39-E49F72558852}"
+	ProjectSection(SolutionItems) = preProject
+		demos\remote-k8s\improve-security\caddy-ingress.yaml = demos\remote-k8s\improve-security\caddy-ingress.yaml
+		demos\remote-k8s\improve-security\Caddy-SSL-Ingress.txt = demos\remote-k8s\improve-security\Caddy-SSL-Ingress.txt
+		demos\remote-k8s\improve-security\catalog.yaml = demos\remote-k8s\improve-security\catalog.yaml
+		demos\remote-k8s\improve-security\create-non-root-container.txt = demos\remote-k8s\improve-security\create-non-root-container.txt
+		demos\remote-k8s\improve-security\deploy-istio.txt = demos\remote-k8s\improve-security\deploy-istio.txt
+		demos\remote-k8s\improve-security\frontend.yaml = demos\remote-k8s\improve-security\frontend.yaml
+		demos\remote-k8s\improve-security\ingress-caddy.yml = demos\remote-k8s\improve-security\ingress-caddy.yml
+		demos\remote-k8s\improve-security\namespace.yaml = demos\remote-k8s\improve-security\namespace.yaml
+		demos\remote-k8s\improve-security\ordering.yaml = demos\remote-k8s\improve-security\ordering.yaml
+		demos\remote-k8s\improve-security\run-kube-bench.txt = demos\remote-k8s\improve-security\run-kube-bench.txt
+		demos\remote-k8s\improve-security\sqlserver.yaml = demos\remote-k8s\improve-security\sqlserver.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "policies", "policies", "{3C89DE76-1E93-42C2-B522-75754DECD372}"
+	ProjectSection(SolutionItems) = preProject
+		demos\remote-k8s\improve-security\policies\frontend.yaml = demos\remote-k8s\improve-security\policies\frontend.yaml
+		demos\remote-k8s\improve-security\policies\Install Kyverno.txt = demos\remote-k8s\improve-security\policies\Install Kyverno.txt
+		demos\remote-k8s\improve-security\policies\RunAsNonRoot.yaml = demos\remote-k8s\improve-security\policies\RunAsNonRoot.yaml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +101,8 @@ Global
 		{6E3D0088-304E-46E2-815B-926899F5CEBA} = {28C020A7-1F12-48AE-9993-D5AF17D23F6A}
 		{3FE6272C-2B19-4B36-9439-C112D2DF630F} = {26E30656-0182-4EEF-B89E-281F23389C42}
 		{9059D156-CC54-4A46-8123-DAF5D3A94E44} = {3FE6272C-2B19-4B36-9439-C112D2DF630F}
+		{A006FB5B-4158-4018-9E39-E49F72558852} = {26E30656-0182-4EEF-B89E-281F23389C42}
+		{3C89DE76-1E93-42C2-B522-75754DECD372} = {A006FB5B-4158-4018-9E39-E49F72558852}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9F232D3-5386-4E57-B49F-7AF54A4A8843}
