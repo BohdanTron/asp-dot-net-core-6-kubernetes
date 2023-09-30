@@ -1,4 +1,6 @@
 using GloboTicket.Ordering.Services;
+using Microsoft.Extensions.Options;
+using Prometheus;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddEnvironmentVariables();
@@ -12,6 +14,12 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<EmailSender>();
 builder.Services.AddApplicationInsightsTelemetry();
 
+builder.Services.AddHealthChecks()
+    .ForwardToPrometheus();
+builder.Services.AddHttpClient(Options.DefaultName)
+    .UseHttpClientMetrics();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -24,5 +32,10 @@ if (app.Environment.IsDevelopment())
 app.UseRouting();
 app.UseAuthorization();
 app.MapControllers();
+
+app.UseHttpMetrics();
+app.UseMetricServer();
+
+app.UseEndpoints(endpoints => endpoints.MapMetrics());
 
 app.Run();
